@@ -1,0 +1,18 @@
+{
+    "manifest_version": 2,
+    "name": "Limit Access Per Day",
+    "version": "0.1",
+    "description": "Limit the number of times you access a specific site per day. The time you spend on it doesn't matter.",
+    "permissions": [
+        "activeTab",
+        "cookies",
+        "<all_urls>"
+    ],
+    "content_scripts": [ {
+        "js": [ "main.js" ],
+        "matches": [ "http://*/*", "https://*/*" ]
+    } ],
+    "browser_action": {
+        "default_popup": "options.html"
+    }
+}
